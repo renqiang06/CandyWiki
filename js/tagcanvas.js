@@ -825,7 +825,7 @@ function Project(tc,p1,sx,sy) {
   var m = tc.radius * tc.z1 / (tc.z1 + tc.z2 + p1.z);
   return {
     x: p1.x * m * sx,
-    y: p1.y * m * sy,
+    y: p1.y * m * sy - 90,// -90为手动偏移量
     z: p1.z,
     w: (tc.z1 - p1.z) / tc.z2
   };
@@ -1738,7 +1738,7 @@ TCproto.SetTTDiv = function(title, tag) {
       var p = AbsPos(tc.canvas.id);
       s.display = 'block';
       s.left = p.x + tc.mx + 'px';
-      s.top = p.y + tc.my + 24 + 'px';
+      s.top = p.y + tc.my + 24 + 'px'; // 24
       tc.tttimer = null;
     }, tc.tooltipDelay);
   }
