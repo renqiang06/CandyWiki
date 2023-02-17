@@ -7,7 +7,7 @@
 
 (function fairyDustCursor() {
   
-  var possibleColors = ["#D61C59", "#E7D84B", "#1B8798"]
+  var possibleColors = ["#D61C59", "#E7D84B", "#1B8798", "#ff8080", "#ff00ff", "#80ffff", "#1B8798"]
   var width = window.innerWidth;
   var height = window.innerHeight;
   var cursor = {x: width/2, y: width/2};
@@ -81,8 +81,8 @@
   
   function Particle() {
 
-    this.character = "*";
-    this.lifeSpan = 120; //ms
+    this.character = "★";//*
+    this.lifeSpan = 600; //120 120行对应
     this.initialStyles ={
       "position": "absolute",
       "display": "block",
@@ -97,7 +97,7 @@
 
       this.velocity = {
         x:  (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 2),
-        y: 1
+        y: 0.5//1
       };
       
       this.position = {x: x - 10, y: y - 20};
@@ -117,7 +117,7 @@
       this.position.y += this.velocity.y;
       this.lifeSpan--;
       
-      this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px,0) scale(" + (this.lifeSpan / 120) + ")";
+      this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px,0) scale(" + (this.lifeSpan / 600) + ")";
     }
     
     this.die = function() {
