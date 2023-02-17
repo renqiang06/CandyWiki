@@ -67,7 +67,7 @@
     <script type="text/javascript" src="js/spiderwebs.js"></script>
     
     <div id="main" class="wall">
-        <div onwaiting="" id="w1" class="words" onclick="displayP3()" onmouseleave="disappearP3()">
+        <div onwaiting="" id="w1" class="words" onclick="displayP3()"> <!--onmouseleave="disappearP3()"-->
             <img src="./img/logo.png" align="middle" width=20% />
             <p style="font-size: 16px; font-weight: bolder; color: #ff0000;">囍礼</p>
             <p id = "P2" class="words" style="display: none; text-align: left; text-indent: 2em;">
@@ -93,9 +93,6 @@
     <script type="text/javascript">
         function displayP3() {
             document.getElementById("P3").style.display = "block";
-        }
-        function disappearP3() {
-            document.getElementById("P3").style.display = "none";
         }
     </script>
     <script type="text/javascript" src="js/vue.js"></script>
