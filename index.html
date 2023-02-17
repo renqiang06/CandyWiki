@@ -6,7 +6,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
-    <title>CandyWiki</title>
+    <title>囍</title>
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/wall.css">
     <link rel="stylesheet" href="css/font.css">
@@ -21,27 +21,38 @@
             padding: 1px 5px 1px;
             font-size: 14px;
             font-family: 'AlibabaPuHuiTi';
-            margin-top: 5px; /*40*/
+            margin-top: 5px;
+            /*40*/
             text-align: center;
-            text-decoration:none;
+            text-decoration: none;
             color: rgb(255, 255, 255);
+            animation:fadenum 5s 1;
         }
+
+        @keyframes fadenum{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+
         a:link {
-			color:rgb(0, 248, 25);
-			text-decoration:none;
-		}
-		a:visited {
-			color:rgb(180, 203, 4);
-			text-decoration:none;
-		}
-		a:hover {
-			color:rgb(255, 255, 255);
-			text-decoration:none;
-		}
-		a:active {
-			color:rgb(241, 34, 2);
-			text-decoration:none;
-		}
+            color: rgb(0, 248, 25);
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: rgb(180, 203, 4);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        a:active {
+            color: rgb(241, 34, 2);
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -54,22 +65,39 @@
     <script type="text/javascript" src="js/clicklove.js"></script>
     <!--蜘蛛网-->
     <script type="text/javascript" src="js/spiderwebs.js"></script>
-
+    
     <div id="main" class="wall">
-        <div class="words">
-            <img src="./img/logo.png" align="middle" width=20%/>
+        <div onwaiting="" id="w1" class="words" onclick="displayP3()" onmouseleave="disappearP3()">
+            <img src="./img/logo.png" align="middle" width=20% />
             <p style="font-size: 16px; font-weight: bolder; color: #ff0000;">囍礼</p>
-            <p style="text-align: left; text-indent: 2em;">
+            <p id = "P2" class="words" style="display: none; text-align: left; text-indent: 2em;">
                 我们为大家准备了一些具有老家川渝家乡特色的零食风的囍礼：
                 泡菜、婚礼喜糖、大凉山苦荞茶、灯影牛肉、磁器口麻花、合川桃片哈。
                 小礼盒里面装的是酸、甜、苦、辣、麻...</p>
-            <!-- <p>&nbsp;</p> -->
-            <p style="font-size: 8px; text-align: center; text-indent: 2em; text-decoration:aliceblue;">
+        </div>
+        <div id="w2" class="words">
+            <p id = "P3" class="words" style="display: none; font-size: 8px; text-align: center; text-indent: 2em; text-decoration:aliceblue;">
                 如果您愿意，可以选择将空喜糖盒归还给我们，我们将为您兑换一个:
-                <a href="./img/保鲜密封袋.jpg">保鲜密封袋</a>。</p>
+                <a href="./img/保鲜密封袋.jpg">保鲜密封袋</a>。
+            </p>
         </div>
     </div>
-
+    <script type="text/javascript">
+        setTimeout("displayP2()",5000);
+    </script>
+    <script type="text/javascript">
+        function displayP2() {
+            document.getElementById("P2").style.display = "block";
+        }
+    </script>
+    <script type="text/javascript">
+        function displayP3() {
+            document.getElementById("P3").style.display = "block";
+        }
+        function disappearP3() {
+            document.getElementById("P3").style.display = "none";
+        }
+    </script>
     <script type="text/javascript" src="js/vue.js"></script>
     <script type="text/javascript" src="js/tagcanvas.js"></script>
     <script type="text/javascript" src="js/member.js"></script>
@@ -115,4 +143,7 @@
             });
         })();
     </script>
+</body>
+
+
 </html>
