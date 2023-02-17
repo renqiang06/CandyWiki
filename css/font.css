@@ -1,7 +1,0 @@
-@charset "UTF-8";
-@font-face {
-    font-family: "AlibabaPuHuiTi";        /*自定义字体名称*/
-    src:url("AlibabaPuHuiTi-2-105-Heavy.ttf");       /*字体包路径*/
-    font-weight: normal;
-    font-style: normal;
-}
