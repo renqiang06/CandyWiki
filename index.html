@@ -9,7 +9,7 @@
     <title>囍</title>
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/wall.css">
-    <link rel="stylesheet" href="css/font.css">
+    <!-- <link rel="stylesheet" href="css/font.css"> -->
     <style type="text/css">
         body,
         html {
@@ -20,7 +20,7 @@
         .words {
             padding: 1px 5px 1px;
             font-size: 14px;
-            font-family: 'AlibabaPuHuiTi';
+            font-family: 'arial';
             margin-top: 5px;
             /*40*/
             text-align: center;
@@ -131,9 +131,9 @@
                     canvas.innerHTML = createHTML();
                     TagCanvas.Start('myCanvas', '', {
                         textColour: null,
-                        textFont: 'AlibabaPuHuiTi',
+                        textFont: 'arial',
                         initial: speed(),
-                        dragControl: false, //1 true 0 false
+                        dragControl: true, //1 true 0 false
                         textHeight: 14 //14
                     });
                 },
